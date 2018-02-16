@@ -11,12 +11,13 @@ class Blocxain {
 
         var idx = 0
 
-        while (idx < tmpXain.size - 1) {
+        while (idx <= xain.size - 1) {
             tmpXain.add(xain[idx])
             if (xain[idx + 1] != tmpXain.hashCode().toString()) {
                 return false
             }
             tmpXain.add(xain[idx + 1])
+            idx += 2
         }
         return true
     }
